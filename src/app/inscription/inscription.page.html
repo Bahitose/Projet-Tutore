@@ -1,0 +1,82 @@
+<!--<ion-header>
+  <ion-toolbar>
+    <ion-title>Inscription</ion-title>
+    <ion-button slot="start"> <ion-back-button defaultHref="home"></ion-back-button></ion-button>
+  </ion-toolbar>
+</ion-header>-->
+
+  <ion-content>
+
+    <div class="logo">
+      <div class="head"> 
+        <ion-back-button defaultHref="home"></ion-back-button>
+        <h3 class="title"> Inscription</h3>
+      </div>
+      <img src="../assets/logo.jpg">
+   </div>
+    <p>Veuillez remplir la formulaire suivante</p>
+    <form [formGroup]="registerform" (ngSubmit)="onSubmit(registerform)">
+       <div> 
+        <ion-item>
+            <ion-label floating>Nom : </ion-label>
+            <ion-input type="text" placeholder="Nom" formControlName="name" required [(ngModel)]="name"></ion-input>
+            <span *ngIf="submitted && f.name.errors?.required">Veuillez entre votre nom</span>
+        </ion-item>
+         <ion-item> 
+            <ion-label floating>Prenom : </ion-label>
+            <ion-input formControlName="prenom" type="text" placeholder="Prenom" required [(ngModel)]="prenom"></ion-input>
+            <span *ngIf="submitted && f.prenom.errors?.required">Le prenon est obligatoire</span>
+        </ion-item>
+        <ion-item>
+            <ion-label floating>Date de Naissance:</ion-label>
+            <ion-input formControlName="date" type="Date" placeholder="Date de Naissance" required [(ngModel)]="date"></ion-input>
+            <span *ngIf="submitted && f.date.errers?.required">La Date de naissance est obligatoire</span>
+          </ion-item>
+        <ion-item>
+            <ion-label floating>Téléphone: </ion-label>
+            <ion-input formControlName="phone" type="tel" placeholder="Téléphone" required [(ngModel)]="phone"></ion-input> 
+            <span *ngIf="submitted && f.phone.errer?.required">Ce champs est obligatoire</span>
+        </ion-item>
+        <ion-item>
+          <ion-label>Genre</ion-label>
+          <ion-select formControlName="genre" class="custom-options" required [(ngModel)]="genre">
+            <ion-select-option value="Homme">Homme</ion-select-option>
+            <ion-select-option value="Femme">Femme</ion-select-option>
+            <span *ngIf="submitted && f.genre.errer?.required">Ce champs est obligatoire</span>
+          </ion-select>
+        </ion-item>
+        <ion-item>
+            <ion-label floating>Email:</ion-label>
+            <ion-input formControlName="mail" type="Email" placeholder="Adresse email" required [(ngModel)]="mail"></ion-input>
+            <span *ngIf="submitted && f.mail.errer?.required">Ce champs est obligatoire</span>
+        </ion-item>
+        <ion-item>
+          <ion-label>Type User</ion-label>
+          <p >Agent CCR</p>
+        </ion-item>
+        <ion-item>
+            <ion-label floating>Matricule: </ion-label>
+            <ion-input formControlName="matricule" type="text" placeholder="Numéro Matricule" required [(ngModel)]="matricule"></ion-input>
+            <span *ngIf="submitted && f.Matricule.errer?.required">Ce champs est obligatoire</span>
+        </ion-item>
+        <ion-item>
+            <ion-label floating>Arrondissement:</ion-label>
+            <ion-input formControlName="arrondissement" type="text" placeholder="Arrondissement"required [(ngModel)]="arrondissement"></ion-input>
+            <span *ngIf="submitted && f.Arrondissement.errer?.required">Ce champs est obligatoire</span>
+          </ion-item>
+          <ion-item>
+            <ion-label floating>Mot de passe:</ion-label>
+            <ion-input formControlName="password" type="password" placeholder="Motde passe" required [(ngModel)]="password"></ion-input>
+            <span *ngIf="submitted && f.password.errer?.required">Ce champs est obligatoire</span>
+          </ion-item>
+          <ion-item>
+            <ion-label floating>Confirme Mot de passe:</ion-label>
+            <ion-input formControlName="confpassword" type="password" placeholder="Confirme le mot de passe" required></ion-input>
+            <span *ngIf="submitted && f.confpassword.errer?.required">Ce champs est obligatoire</span>
+          </ion-item>
+      </div>
+    </form>
+        <ion-button shope="round" [disabled]="registerform.invalid" type="submit" expand="block" (click)="showAcceuil()">
+          <ion-icon name="logo-vimeo"></ion-icon> Valide</ion-button>
+
+</ion-content>

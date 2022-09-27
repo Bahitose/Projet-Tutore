@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Page_Consultation</ion-title>
+    <ion-button slot="start"> <ion-back-button defaultHref="acceuil"></ion-back-button></ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card class="body" *ngFor="let item of Liste">
+    <p>Nom complet: {{item.nom}} {{item.prenom}} </p>
+    <p>Matricule: {{item.matricule}}</p>
+    <p>Automobile: {{item.automobile}}</p>
+    <p>Date et heure : {{item.date}} {{item.time}} </p>
+    <p>Amende : {{item.prix}} </p>
+  </ion-card>
+</ion-content>

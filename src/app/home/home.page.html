@@ -1,0 +1,34 @@
+
+<ion-content [fullscreen]="true">
+  
+  <div class="logo">
+      <img src="../assets/logo.jpg">
+  <h3 class="titre">App Paiement</h3>
+    </div>
+  <form [formGroup]="registerform" (ngSubmit)="login()"> 
+      <p >Bienvenue veuillez vous identifier</p>
+      <div class="padding">
+        <ion-item>
+          <ion-label position="floating"><ion-icon name="mail"></ion-icon> :</ion-label>
+          <ion-input type="Email" placeholder="Adresse email" formControlName="mail" required></ion-input>
+          <span *ngIf="submitted && f.mail.errors?.required">Veuillez entre votre Email</span>
+        </ion-item>
+        <ion-item>
+        <ion-label  position="floating"><ion-icon name="key"></ion-icon> :</ion-label>
+            <ion-input type="password" placeholder="Motde passe" formControlName="password" required></ion-input>
+            <span *ngIf="submitted && f.password.errors?.required">Saisez votre Mot de passe</span>
+        </ion-item>
+        <ion-item lines="none">
+          <button fill="clear" slot="end">Mot de passe oublié ?</button>
+        </ion-item>
+      
+        <ion-button class="bt_con" fill="outline" type="submit" shape="round" expand="block" [disabled]="registerform.invalid">Connexion</ion-button>
+        
+       <!-- <ion-button shape="round" expand="block" (click)="showInscription()">Inscription</ion-button> -->
+      
+        <ion-item lines="none">
+          <ion-label  >Pas de compte ?<a  (click)="showInscription()">Inscrivez-vous</a></ion-label>
+        </ion-item>
+   </div>
+</form>
+</ion-content>

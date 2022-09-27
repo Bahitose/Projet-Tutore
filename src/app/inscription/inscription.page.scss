@@ -1,0 +1,25 @@
+.logo {
+    position: relative;
+    height: 260px;
+    width: 260px;
+    background-color: #FFFFFF;
+    border-radius: 0% 0% 40% 0%; 
+    .head{
+      display: flex;
+    }
+}
+img{
+    position: absolute;
+    border-radius: 25% 10%;
+    height: 100px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  ion-content{
+    --ion-background-color:#005AA7;
+
+  }
+  ion-item{
+    --ion-background-color: transparent!important;
+  }

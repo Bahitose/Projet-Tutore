@@ -1,0 +1,13 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Page_Infraction</ion-title>
+    <iob-button slot="start"> <ion-back-button defaultHref="home"></ion-back-button></iob-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <h3>Les diffèrents Types dinfractions</h3>
+  <ion-card *ngFor="let item of List" (click)="AltApcon(item.nom, item.description)">
+    <ion-card-header> {{item.nom}} </ion-card-header>
+  </ion-card>
+</ion-content>

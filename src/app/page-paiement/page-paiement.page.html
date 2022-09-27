@@ -1,0 +1,84 @@
+<!--<ion-header>
+  <ion-toolbar>
+    <ion-title>Page_Paiement</ion-title>
+    <iob-button slot="start"> <ion-back-button defaultHref="home"></ion-back-button></iob-button>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content>
+
+
+  <div class="logo">
+    <div class="head">
+      <ion-back-button defaultHref="home"></ion-back-button>
+      <h3>Page_Paiement</h3>
+    </div>
+    <div>
+       <img src="../assets/logo.jpg">
+    </div>
+     
+  </div>
+    <p>Veuillez remplir la formulaire suivante pour procèder au paiement d'infractions</p>
+    <p>Tous les champs sont obligatoires</p>
+
+  <form [formGroup]="registerform" (ngSubmit)="facture()"> 
+    <div class="paie">
+      <ion-item>
+        <ion-label floating>Nom : </ion-label>
+        <ion-input type="text" placeholder="Nom" formControlName="nom" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Prenom : </ion-label>
+        <ion-input type="text" placeholder="Prenom" formControlName="prenom" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>N° carte d'identite : </ion-label>
+        <ion-input type="text" placeholder="N° carte d'identite" formControlName="numero_carte" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Matricule : </ion-label>
+        <ion-input type="text" placeholder="Matricule du véhicule/Moto" formControlName="matricule" required></ion-input>
+      </ion-item>
+
+      <ion-item >
+          <ion-radio-group formControlName="automobile" required>
+            <ion-list-header >
+              <ion-label>Moyens de deplacement</ion-label>
+            </ion-list-header>
+            <div class="MoyDepl">
+            <ion-item>
+              <ion-label>Moto</ion-label>
+              <ion-radio value="Moto"></ion-radio>
+            </ion-item>
+        
+            <ion-item>
+              <ion-label>Voiture</ion-label>
+              <ion-radio value="Voiture"></ion-radio>
+            </ion-item>
+            </div>
+          </ion-radio-group>
+        
+      </ion-item>
+
+      <ion-item >
+        <ion-label>Types d'infractions</ion-label>
+        <ion-select required formControlName="infraction" [(ngModel)]="Nom" (ionChange)="listeParNom()">
+          <div *ngFor="let item of liste">
+            <ion-select-option value="{{item.nom}}">{{item.nom}}</ion-select-option>
+          </div>
+
+        </ion-select>
+      </ion-item>
+      <p>Cet Infration va vous coûter : {{infraction?.amende}} F</p>
+      <!-- <ion-item>
+        <ion-label>Modes de Paiement</ion-label>
+          <ion-select required formControlName="mode_paiement">
+            <ion-select-option value="Orangeoney">Orangeoney</ion-select-option>
+            <ion-select-option value="MooveMoney">MooveMoney</ion-select-option>
+            <ion-select-option value="Compte Bancaire">Compte Bancaire</ion-select-option>
+          </ion-select>
+      </ion-item> -->
+      <ion-button slot="end" type="submit">Enregistre</ion-button>
+    </div>
+  </form>
+</ion-content>

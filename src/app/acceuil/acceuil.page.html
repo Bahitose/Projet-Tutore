@@ -1,0 +1,32 @@
+
+<ion-content>
+
+  <div class="headacc">
+    <div head>
+      <ion-button slot="start"> <ion-menu-button menu="main-menu"></ion-menu-button></ion-button>
+    </div>
+    <img src="../../assets/logo.jpg">
+  </div>
+  <h4 class="Bienve">Bienvenue dans votre App de Paiement</h4>
+    <div class="card">
+      <div>
+        <ion-card (click)="showPaie()">
+          <img class="imc" src="../../assets/Paie.jpg">
+        </ion-card>
+        <p>Facturation</p>
+      </div>
+        <div>
+          <ion-card (click)="showConsultation()">
+            <img class="imc" src="../../assets/Paie.jpg">
+          </ion-card>
+          <p>Consultation</p>
+        </div>
+        <div>
+          <ion-card (click)="showInsfration()">
+            <img class="imc" src="../../assets/Paie.jpg">
+          </ion-card>
+          <p>type d'infraction</p>
+        </div>
+    </div>
+    
+</ion-content>

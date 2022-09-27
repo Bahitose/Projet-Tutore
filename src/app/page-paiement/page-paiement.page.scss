@@ -1,0 +1,42 @@
+ion-content{
+    background-color: #005AA7;
+    width : calc(100% + 15px)
+}
+.MoyDepl{
+    display: flex;
+    justify-content: space-between;
+}
+.paie{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-radius: 20% 20%;
+    ion-item{
+    --ion-background-color: transparent!important;
+  }
+}
+.logo{
+    position: relative;
+    height: 260px;
+    width: auto;
+    background-color: #FFFFFF;
+    border-radius: 0% 0% 40% 0%;  
+}
+img{
+    position: absolute;
+    border-radius: 25% 10%;
+    height: 100px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+ion-content{
+    --ion-background-color:#005AA7;
+
+}
+ion-item{
+    --ion-background-color: transparent!important;
+}
+.head{
+    display: flex;
+}

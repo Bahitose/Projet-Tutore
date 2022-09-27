@@ -1,0 +1,37 @@
+ion-content{
+  --ion-background-color:#005AA7;
+}
+ion-item{
+  --ion-background-color: transparent!important;
+}
+.titre{
+  text-align: center;
+}
+.padding{
+  background-color: #FFFFFF;
+ border-radius: 20% 20% 20% 20%;
+  padding: 5%;
+}
+.flex{
+  display: flex;
+  justify-content: space-between;
+}
+.logo {
+  position: relative;
+  height: 180px;
+}
+img{
+  position: absolute;
+   border-radius: 25% 10%;
+    height: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+bt_con{
+  color: black;
+}
+//ion-input{
+ // box-shadow: 0px 5px 5px;
+//}

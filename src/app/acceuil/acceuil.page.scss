@@ -1,0 +1,44 @@
+.headacc {
+    position: relative;
+    height: 220px;
+    width: 260px;
+    background-color: transparent!important;
+    border-radius: 0% 0% 40% 0%; 
+   
+}
+
+img{
+    position: absolute;
+    border-radius: 25% 10%;
+    height: 100px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  ion-content{
+    --ion-background-color:#005AA7;
+
+  }
+  ion-item{
+    --ion-background-color: transparent!important;
+  }
+
+.card{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-radius: 20% 20% 20% 20%;
+    background-color: #FFFFFF;
+    ion-card{
+        width: 90px;
+        height: 80px;
+    }
+    img{
+    height: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    }
+    
+}

@@ -1,0 +1,20 @@
+<ion-app>
+
+  <ion-menu side="start" menuId="main-menu" contentId="main">
+    <ion-header>
+      <ion-toolbar >
+        <ion-title>Start Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <ion-item (click)="showhome()"><ion-icon name="home-outline"></ion-icon> Home</ion-item>
+        <ion-item (click)="showcontact()"><ion-icon name="send-outline"></ion-icon> Contacte</ion-item>
+        <ion-item (click)="showpprofil()"><ion-icon name="person-circle"></ion-icon>Profil</ion-item>
+        <ion-item (click)="showaide()"><ion-icon name="help-circle-outline"></ion-icon> A propos</ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+  <ion-router-outlet id="main"></ion-router-outlet>
+</ion-app>
